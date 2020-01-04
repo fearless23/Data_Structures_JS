@@ -2,10 +2,10 @@
 
 A `linked list` is a sequential list of nodes that hold data which points to other node(s), also containng data.
 
-`Node`: An object containing data and reference/pointer to other node(s).
-`Head`: The first node in a linked list.
-`Tail`: The last node in a linked list.
-`Pointer`: Reference to another node.
+- `Node`: An object containing data and reference/pointer to other node(s).
+- `Head`: The first node in a linked list.
+- `Tail`: The last node in a linked list.
+- `Pointer`: Reference to another node.
 
 ### Singly Linked List (SLL):
 
