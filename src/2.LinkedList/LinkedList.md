@@ -14,8 +14,8 @@ Each node starting from head point only to next node until tail. Tail points to 
 ### Doubly Linked List (DLL):
 
 Each node starting from head points to previous and next node.
-`Head`\`s previous pointer points to null and next pointer points to next Node.
-`Tail`\`s previous pointer points to second last node and next pointer points to null.
+- `Head` previous pointer points to null and next pointer points to next Node.
+- `Tail` previous pointer points to previous node and next pointer points to null.
 
 ### SLL vs DLL
 
