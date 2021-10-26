@@ -1,26 +1,26 @@
 class DataNode {
-  constructor(data) {
+  constructor (data) {
     this.data = data;
     this.next = null;
   }
 }
 
 class Queue {
-  constructor() {
+  constructor () {
     this.head = null;
     this.tail = null;
     this.size = 0;
   }
 
-  getTail() {
+  getTail () {
     let pointer = this.head;
     while (pointer.next) {
-      pointer = currNode.next;
+      pointer = pointer.next;
     }
     return pointer;
   }
 
-  enqueue(data) {
+  enqueue (data) {
     const newNode = new DataNode(data);
     if (!this.head) {
       this.head = newNode;
@@ -32,7 +32,7 @@ class Queue {
     this.size++;
   }
 
-  dequeue() {
+  dequeue () {
     if (!this.head) {
       return false;
     } else {
@@ -43,11 +43,11 @@ class Queue {
     }
   }
 
-  length() {
+  length () {
     return this.size;
   }
 
-  peek() {
+  peek () {
     if (this.head) {
       return this.head.data;
     } else {
@@ -55,18 +55,18 @@ class Queue {
     }
   }
 
-  isEmpty() {
+  isEmpty () {
     return this.size === 0;
   }
 
-  printQueue(name = "Queue") {
+  printQueue (name = 'Queue') {
     let curr = this.head;
-    let str = "FRONT -- ";
+    let str = 'FRONT -- ';
     while (curr) {
-      str += "| " + curr.data + " ";
+      str += '| ' + curr.data + ' ';
       curr = curr.next;
     }
-    const x = name + "\n" + "--------\n" + str + " | -- BACK";
+    const x = name + '\n' + '--------\n' + str + ' | -- BACK';
     console.log(x);
     return x;
   }

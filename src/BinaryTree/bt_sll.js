@@ -1,5 +1,5 @@
 class DataNode {
-  constructor(data) {
+  constructor (data) {
     this.data = data;
     this.left = null;
     this.right = null;
@@ -7,11 +7,11 @@ class DataNode {
 }
 
 class BinaryTreeSLL {
-  constructor() {
+  constructor () {
     this.root = null;
   }
 
-  insert(data) {
+  insert (data) {
     const newNode = new DataNode(data);
 
     // Empty Tree
@@ -24,29 +24,27 @@ class BinaryTreeSLL {
     this.addNode(this.root, newNode);
   }
 
-  addNode(startNode, newNode) {
+  addNode (startNode, newNode) {
     if (newNode.data <= startNode.data) {
       if (startNode.left) {
         this.addNode(startNode.left, newNode);
       } else {
         startNode.left = newNode;
-        return;
       }
     } else {
       if (startNode.right) {
         this.addNode(startNode.right, newNode);
       } else {
         startNode.right = newNode;
-        return;
       }
     }
   }
 
-  insertValues(vals) {
-    for (let k of vals) this.insert(k);
+  insertValues (vals) {
+    for (const k of vals) this.insert(k);
   }
 
-  search(val) {}
+  search (val) {}
 }
 
 const x = new BinaryTreeSLL();

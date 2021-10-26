@@ -1,9 +1,10 @@
 const isCurrDataNode = (curr, data) => curr.data === data;
 const isPrevDataNode = (curr, data) => curr.next && curr.next.data === data;
+
 const isCurrNode = (curr, node) => curr === node;
 const isPrevNode = (curr, node) => curr.next && curr.next === node;
 
-const getCompareFn = function(type) {
+const getCompareFn = type => {
   const types = {
     curr: isCurrNode,
     prev: isPrevNode,
@@ -13,7 +14,7 @@ const getCompareFn = function(type) {
   return types[type];
 };
 
-const compareNodes = function(startNode, data, compareFn) {
+const compareNodes = (startNode, data, compareFn) => {
   let currNode = startNode;
   while (currNode) {
     if (compareFn(currNode, data)) break;
@@ -22,14 +23,12 @@ const compareNodes = function(startNode, data, compareFn) {
   return currNode;
 };
 
-exports.getNodeByType = function(type) {
-  return function(startNode, data) {
-    const compareFn = getCompareFn(type);
-    return compareNodes(startNode, data, compareFn);
-  };
+export const getNodeByType = type => (startNode, data) => {
+  const compareFn = getCompareFn(type);
+  return compareNodes(startNode, data, compareFn);
 };
 
-exports.getNodeByIndex = function(head, idx, size) {
+export const getNodeByIndex = (head, idx, size) => {
   if (idx < 0 || idx >= size) {
     throw RangeError(`Index out of bounds, use value between 0 & ${size - 1}`);
   }

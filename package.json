@@ -2,10 +2,6 @@
   "name": "data_structures",
   "version": "1.0.0",
   "description": "Data Structures in JS",
-  "main": "src/index.js",
-  "scripts": {
-    "start": "node src/index.js"
-  },
   "keywords": [
     "DS",
     "Queue",
@@ -14,5 +10,32 @@
     "BST"
   ],
   "author": "Jaspreet Singh",
-  "license": "ISC"
+  "dependencies": {
+    "esm": "^3.2.25",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "husky": "^4.3.0",
+    "pino": "^6.13.0",
+    "pino-pretty": "^4.3.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "module": "data.js",
+  "private": true,
+  "scripts": {
+    "debug": "node -r esm mock/debug --inspect-brk=25529",
+    "lint": "./node_modules/.bin/eslint src/**.js",
+    "lint-fix": "./node_modules/.bin/eslint src/**.js --fix"
+  }
 }

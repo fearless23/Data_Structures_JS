@@ -1,0 +1,6 @@
+{
+  "type": "join_waitlist",
+  "payload": {
+    "user_id": "2f8cb543-4b32-435d-9d82-2b7ff7c4ae0e"
+  }
+}

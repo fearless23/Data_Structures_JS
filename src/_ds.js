@@ -1,5 +1,7 @@
-const { SinglyLinkedList } = require("./2.LinkedList/sll");
+import { single_linked_list } from './2.LinkedList/single_linked_list';
 
-module.exports = {
-  SinglyLinkedList
+export const ds = {
+  LINKED_LIST: {
+    single_linked_list
+  }
 };
